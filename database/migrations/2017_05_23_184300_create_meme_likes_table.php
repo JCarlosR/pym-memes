@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateMemeLikesTable extends Migration
 {
-    /**
+    /**php 
      * Run the migrations.
      *
      * @return void
