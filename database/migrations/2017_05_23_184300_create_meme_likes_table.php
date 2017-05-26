@@ -15,6 +15,15 @@ class CreateMemeLikesTable extends Migration
     {
         Schema::create('meme_likes', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->refernces('id')->on('users');
+
+            $table->integer('meme_id')->unsigned();
+            $table->foreign('meme_id')->references('id')->on('memes');
+
+            $table->boolean('like');
+
             $table->timestamps();
         });
     }
